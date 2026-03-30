@@ -6,19 +6,19 @@ const config: Config = {
     extend: {
       colors: {
         forest: {
-          DEFAULT: "#1A3D2B",
-          mid: "#2D5E42",
-          light: "#4A8C6A",
+          DEFAULT: "#6B0F1A", 
+          mid: "#8B1A27",  
+          light: "#A52030", 
         },
-        sage: "#4A8C6A",
-        mint: "#A8D5B5",
-        pale: "#EFF7F2",
-        accent: "#6BBF8E",
-        rule: "#D4E8DA",
+        sage: "#8B1A27",  
+        mint: "#D4A0A7",  
+        pale: "#F7F0F1",  
+        accent: "#C41E3A",  
+        rule: "#E8D0D3",  
         ink: {
-          DEFAULT: "#111810",
-          2: "#3A4A3E",
-          muted: "#7A8C80",
+          DEFAULT: "#111010",
+          2: "#3A2A2E",
+          muted: "#8C7A7E",
         },
       },
       fontFamily: {

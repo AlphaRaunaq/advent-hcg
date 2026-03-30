@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -30,6 +30,18 @@ const navItems = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 150); // small delay — enough to move cursor into dropdown
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-rule">
@@ -51,8 +63,8 @@ export default function Navbar() {
             <div
               key={item.label}
               className="relative"
-              onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-              onMouseLeave={() => setOpenDropdown(null)}
+              onMouseEnter={() => item.children && handleMouseEnter(item.label)}
+              onMouseLeave={() => item.children && handleMouseLeave()}
             >
               <Link
                 href={item.href}
@@ -78,12 +90,17 @@ export default function Navbar() {
 
               {/* Dropdown */}
               {item.children && openDropdown === item.label && (
-                <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-rule shadow-sm rounded-sm py-1">
+                <div
+                  className="absolute top-full left-0 pt-2 mt-1 w-52 bg-white border border-rule shadow-sm rounded-sm py-1"
+                  onMouseEnter={() => handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   {item.children.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
                       className="block px-4 py-2.5 text-sm text-ink-2 hover:bg-pale hover:text-forest transition-colors"
+                      onClick={() => setOpenDropdown(null)}
                     >
                       {child.label}
                     </Link>
