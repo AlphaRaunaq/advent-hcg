@@ -23,7 +23,7 @@ export default function OurVision() {
       {/* Hero */}
       <section className="bg-forest py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <span className="text-[11px] font-medium text-accent tracking-[0.12em] uppercase">
+          <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Our Vision
           </span>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
@@ -37,15 +37,16 @@ export default function OurVision() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[200px_1fr] gap-16">
           <div className="pt-1">
             <div className="w-10 h-0.5 bg-accent mb-4" />
-            <span className="text-[11px] font-medium text-sage tracking-[0.12em] uppercase">
+            <span className="text-[14px] font-medium text-sage tracking-[0.12em] uppercase">
               Vision
             </span>
           </div>
-          <div className="space-y-5 text-[15px] text-ink-2 leading-relaxed font-light">
+          <div className="space-y-5 text-[18px] text-ink-2 leading-relaxed font-light">
             <p>
-              Advent aims to redefine healthcare delivery through patient centric strategies
-              and innovation to create sustainability. Our Vision is illustrated in the triangle
-              placed alongside. This incorporates the philosophy, which drives our work.
+              Advent aims to redefine healthcare delivery through patient
+              centric strategies and innovation to create sustainability. Our
+              Vision is illustrated in the triangle placed alongside. This
+              incorporates the philosophy, which drives our work.
             </p>
           </div>
         </div>
@@ -59,9 +60,13 @@ export default function OurVision() {
               <div key={i} className="bg-white p-8 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                  <h3 className="font-serif text-lg font-bold text-ink">{item.title}</h3>
+                  <h3 className="font-serif text-lg font-bold text-ink">
+                    {item.title}
+                  </h3>
                 </div>
-                <p className="text-[13px] text-ink-muted leading-relaxed pl-5">{item.desc}</p>
+                <p className="text-[16px] text-ink-muted leading-relaxed pl-5">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>

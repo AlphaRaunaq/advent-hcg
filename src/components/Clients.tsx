@@ -10,14 +10,13 @@ export default function Clients() {
   return (
     <section className="bg-pale border-y border-rule">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-14">
-
         <div className="flex flex-col lg:flex-row lg:items-center gap-10">
           <div className="shrink-0">
             <div className="w-10 h-0.5 bg-accent mb-4" />
-            <span className="text-[11px] font-medium text-sage tracking-[0.12em] uppercase block mb-1">
+            <span className="text-[14px] font-medium text-sage tracking-[0.12em] uppercase block mb-1">
               Our Prestigious Clients
             </span>
-            <p className="text-[13px] text-ink-muted max-w-[180px] leading-relaxed">
+            <p className="text-[16px] text-ink-muted max-w-[180px] leading-relaxed">
               Trusted by leading organisations across India and worldwide
             </p>
           </div>
@@ -35,7 +34,6 @@ export default function Clients() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export default function Footer() {
               width={120}
               height={38}
             />
-            <p className="text-[13px] text-white/40 leading-relaxed max-w-xs font-light">
+            <p className="text-[16px] text-white/40 leading-relaxed max-w-xs font-light">
               Redefining Healthcare Delivery. Based in Delhi with presence
               across India and partners worldwide.
             </p>
@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="text-[11px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
+            <h4 className="text-[14px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
               About Us
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-[11px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
+            <h4 className="text-[14px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
               Services
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-[11px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
+            <h4 className="text-[14px] font-medium text-white/40 tracking-[0.12em] uppercase mb-4">
               Explore
             </h4>
             <ul className="flex flex-col gap-2.5">

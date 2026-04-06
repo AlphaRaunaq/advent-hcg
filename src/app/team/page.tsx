@@ -176,7 +176,7 @@ function TeamCard({ member }: { member: (typeof coreTeam)[0] }) {
             />
           </span>
         </div>
-        <p className="text-[11px] text-ink-muted mt-2 text-center max-w-[96px] lg:max-w-[128px] leading-snug">
+        <p className="text-[14px] text-ink-muted mt-2 text-center max-w-[96px] lg:max-w-[128px] leading-snug">
           {member.role}
         </p>
       </div>
@@ -187,7 +187,7 @@ function TeamCard({ member }: { member: (typeof coreTeam)[0] }) {
           {member.bullets.map((b, i) => (
             <li
               key={i}
-              className="flex gap-3 text-[13px] text-ink-muted leading-relaxed"
+              className="flex gap-3 text-[16px] text-ink-muted leading-relaxed"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-[6px]" />
               <span>{b}</span>
@@ -205,7 +205,7 @@ export default function Team() {
       {/* Hero */}
       <section className="bg-forest py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <span className="text-[11px] font-medium text-accent tracking-[0.12em] uppercase">
+          <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Advent Team
           </span>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
@@ -219,11 +219,11 @@ export default function Team() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[200px_1fr] gap-16">
           <div className="pt-1">
             <div className="w-10 h-0.5 bg-accent mb-4" />
-            <span className="text-[11px] font-medium text-sage tracking-[0.12em] uppercase">
+            <span className="text-[14px] font-medium text-sage tracking-[0.12em] uppercase">
               Our people
             </span>
           </div>
-          <div className="space-y-4 text-[15px] text-ink-2 leading-relaxed font-light">
+          <div className="space-y-4 text-[18px] text-ink-2 leading-relaxed font-light">
             <p>
               Our core team comprises experts from the domain of healthcare as
               well as domain experts from the realms of general management,
@@ -279,7 +279,7 @@ export default function Team() {
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-4">
             Advisory Team
           </h2>
-          <p className="text-[15px] text-ink-muted leading-relaxed font-light max-w-3xl mb-12">
+          <p className="text-[18px] text-ink-muted leading-relaxed font-light max-w-3xl mb-12">
             Advisory Team provides a 'Third-Eye' view to various
             projects/assignments with their in-depth domain expertise. Our
             Advisory team comprises experts from the various domains of

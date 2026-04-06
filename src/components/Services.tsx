@@ -34,7 +34,7 @@ const services = [
   {
     num: "06",
     title: "MeVaT",
-    desc: "In emerging global trends and changing healthcare delivery models Advent has defined an opportunity in \"Medical Value Travel\" and on the process to leverage its existing understanding and relationships to participate in this area of healthcare delivery.",
+    desc: 'In emerging global trends and changing healthcare delivery models Advent has defined an opportunity in "Medical Value Travel" and on the process to leverage its existing understanding and relationships to participate in this area of healthcare delivery.',
     href: "/advent-mevat",
   },
 ];
@@ -43,12 +43,11 @@ export default function Services() {
   return (
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-24">
-
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
           <div>
             <div className="w-10 h-0.5 bg-accent mb-4" />
-            <span className="text-[11px] font-medium text-sage tracking-[0.12em] uppercase block mb-3">
+            <span className="text-[14px] font-medium text-sage tracking-[0.12em] uppercase block mb-3">
               Our Services
             </span>
             <h2 className="font-serif text-4xl lg:text-[42px] font-bold text-ink tracking-tighter leading-[1.1]">
@@ -71,18 +70,21 @@ export default function Services() {
               href={s.href}
               className="group p-8 border-rule md:border-r last:border-r-0 [&:nth-child(3n)]:border-r-0 border-b hover:bg-pale transition-colors flex flex-col gap-4"
             >
-              <span className="font-serif text-sm text-mint font-bold">{s.num}</span>
+              <span className="font-serif text-sm text-mint font-bold">
+                {s.num}
+              </span>
               <h3 className="font-serif text-lg font-bold text-ink leading-snug group-hover:text-forest transition-colors">
                 {s.title}
               </h3>
-              <p className="text-[13px] text-ink-muted leading-relaxed flex-1">{s.desc}</p>
+              <p className="text-[16px] text-ink-muted leading-relaxed flex-1">
+                {s.desc}
+              </p>
               <span className="text-sm text-forest font-medium opacity-0 group-hover:opacity-100 transition-opacity -translate-x-1 group-hover:translate-x-0 inline-block">
                 Read More →
               </span>
             </Link>
           ))}
         </div>
-
       </div>
     </section>
   );
