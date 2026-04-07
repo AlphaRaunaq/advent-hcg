@@ -24,7 +24,7 @@ const navItems = [
     ],
   },
   { label: "Project Showcase", href: "/project-showcase" },
-  { label: "Gallery", href: "/album" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 export default function Navbar() {

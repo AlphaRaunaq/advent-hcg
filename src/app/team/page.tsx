@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 
 const coreTeam = [
   {
@@ -155,45 +158,83 @@ const advisoryTeam = [
   },
 ];
 
-function TeamCard({ member }: { member: (typeof coreTeam)[0] }) {
-  const initials = member.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .slice(0, 2);
+function TeamMember({ member }: { member: (typeof coreTeam)[0] }) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const hasPhoto = member.photo !== undefined;
+
   return (
-    <div className="bg-white p-8 flex flex-col lg:flex-row gap-8">
-      {/* Photo placeholder */}
-      <div className="flex-shrink-0">
-        <div className="w-24 h-24 lg:w-32 lg:h-32 bg-pale rounded-sm flex items-center justify-center">
-          <span className="font-serif text-2xl font-bold text-forest">
-            <Image
-              src={`/team/${member.photo}`}
-              alt={member.name}
-              width={128}
-              height={128}
-              className="rounded-sm object-cover w-24 h-24 lg:w-32 lg:h-32"
-            />
-          </span>
+    <div ref={sectionRef} className="relative">
+      {/* Sticky Header - Image with Name & Role */}
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+        {/* Full-screen background image or placeholder */}
+        <div className="absolute inset-0">
+          {hasPhoto ? (
+            <>
+              <Image
+                src={`/team/${member.photo}`}
+                alt={member.name}
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Overlay gradient for readability - lighter for brighter image */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-white" />
+            </>
+          ) : (
+            /* Placeholder background for members without photos */
+            <div className="absolute inset-0 bg-gradient-to-b from-forest via-forest-mid to-white" />
+          )}
         </div>
-        <p className="text-[14px] text-ink-muted mt-2 text-center max-w-[96px] lg:max-w-[128px] leading-snug">
-          {member.role}
-        </p>
+
+        {/* Name & Role - centered on image */}
+        <div className="relative z-10 text-center px-6">
+          {!hasPhoto && (
+            <div className="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+              <span className="font-serif text-4xl font-bold text-white">
+                {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+              </span>
+            </div>
+          )}
+          <h3 className="font-serif text-4xl lg:text-6xl font-bold text-white mb-3 drop-shadow-lg">
+            {member.name}
+          </h3>
+          <p className="text-lg lg:text-xl text-white/90 font-medium drop-shadow-md">
+            {member.role}
+          </p>
+        </div>
       </div>
-      {/* Content */}
-      <div className="flex flex-col gap-3 flex-1">
-        <h3 className="font-serif text-xl font-bold text-ink">{member.name}</h3>
-        <ul className="space-y-2">
-          {member.bullets.map((b, i) => (
-            <li
-              key={i}
-              className="flex gap-3 text-[16px] text-ink-muted leading-relaxed"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-[6px]" />
-              <span>{b}</span>
-            </li>
-          ))}
-        </ul>
+
+      {/* Scrollable Bullet Points */}
+      <div className="relative bg-white -mt-32 lg:-mt-48 z-20 rounded-t-3xl px-0 lg:px-12 py-12 lg:py-20">
+        {/* Mobile: Boxed bullets */}
+        <div className="max-w-4xl mx-auto px-6 lg:hidden">
+          <ul className="space-y-6">
+            {member.bullets.map((bullet, i) => (
+              <li
+                key={i}
+                className="p-6 border border-rule rounded-lg bg-white hover:border-forest/50 transition-colors"
+              >
+                <p className="text-[16px] text-ink-2 leading-relaxed">
+                  {bullet}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* Desktop: Original bullet style */}
+        <div className="hidden lg:block max-w-4xl mx-auto px-6 lg:px-0">
+          <ul className="space-y-12 lg:space-y-16">
+            {member.bullets.map((bullet, i) => (
+              <li
+                key={i}
+                className="flex gap-4 text-[18px] text-ink-2 leading-relaxed"
+              >
+                <span className="w-2 h-2 rounded-full bg-forest flex-shrink-0 mt-2.5" />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -264,9 +305,9 @@ export default function Team() {
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-12">
             Core Team
           </h2>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col">
             {coreTeam.map((member) => (
-              <TeamCard key={member.name} member={member} />
+              <TeamMember key={member.name} member={member} />
             ))}
           </div>
         </div>
@@ -286,9 +327,9 @@ export default function Team() {
             healthcare in the fields of Medical Quality, Medical Equipment,
             Healthcare Finance and Healthcare Space/Facility Design.
           </p>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col">
             {advisoryTeam.map((member) => (
-              <TeamCard key={member.name} member={member} />
+              <TeamMember key={member.name} member={member} />
             ))}
           </div>
         </div>
