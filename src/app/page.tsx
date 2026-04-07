@@ -10,9 +10,9 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <Clients />
       <Background />
       <Services />
-      <Clients />
       <Subscribe />
     </main>
   );

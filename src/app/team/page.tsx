@@ -299,23 +299,23 @@ export default function Team() {
       </section>
 
       {/* Core Team */}
-      <section className="bg-white py-20 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white py-20 px-0 lg:px-12">
+        <div className="px-6 lg:px-0 max-w-7xl lg:mx-auto">
           <div className="w-10 h-0.5 bg-accent mb-4" />
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-12">
             Core Team
           </h2>
-          <div className="flex flex-col">
-            {coreTeam.map((member) => (
-              <TeamMember key={member.name} member={member} />
-            ))}
-          </div>
+        </div>
+        <div className="flex flex-col max-w-7xl lg:mx-auto">
+          {coreTeam.map((member) => (
+            <TeamMember key={member.name} member={member} />
+          ))}
         </div>
       </section>
 
       {/* Advisory Team */}
-      <section className="bg-pale py-20 px-6 lg:px-12 border-t border-rule">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-pale py-20 px-0 lg:px-12 border-t border-rule">
+        <div className="px-6 lg:px-0 max-w-7xl lg:mx-auto">
           <div className="w-10 h-0.5 bg-accent mb-4" />
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-4">
             Advisory Team
@@ -327,11 +327,11 @@ export default function Team() {
             healthcare in the fields of Medical Quality, Medical Equipment,
             Healthcare Finance and Healthcare Space/Facility Design.
           </p>
-          <div className="flex flex-col">
-            {advisoryTeam.map((member) => (
-              <TeamMember key={member.name} member={member} />
-            ))}
-          </div>
+        </div>
+        <div className="flex flex-col max-w-7xl lg:mx-auto">
+          {advisoryTeam.map((member) => (
+            <TeamMember key={member.name} member={member} />
+          ))}
         </div>
       </section>
     </main>
