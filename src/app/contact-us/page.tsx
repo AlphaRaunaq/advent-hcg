@@ -77,8 +77,15 @@ export default function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+
+    const subject = encodeURIComponent(
+      formData.subject || "Contact Form Inquiry"
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+
+    window.location.href = `mailto:support@adventhcg.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (

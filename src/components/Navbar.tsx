@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src="/advent_logo_white.png"
+            src="/advent_logo.png"
             alt="Advent HealthCare"
             width={140}
             height={45}

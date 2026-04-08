@@ -59,14 +59,14 @@ export default function Clients() {
           {track.map((logo, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-36 h-20 bg-white rounded-lg border border-rule flex items-center justify-center px-4"
+              className="flex-shrink-0 w-48 h-28 bg-white rounded-lg border border-rule flex items-center justify-center px-4"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                width={120}
-                height={60}
-                className="object-contain max-h-14 w-auto"
+                width={160}
+                height={90}
+                className="object-contain max-h-20 w-auto"
               />
             </div>
           ))}

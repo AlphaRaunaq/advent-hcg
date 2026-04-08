@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Image
-              src="/advent_logo_white.png"
+              src="/advent_logo.png"
               alt="Advent HealthCare"
               width={120}
               height={38}

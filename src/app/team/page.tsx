@@ -107,6 +107,7 @@ const coreTeam = [
   {
     name: "Vimlesh Tiwari",
     role: "Accountant",
+    photo: "vimlesh-tiwari.jpeg",
     bullets: ["Description coming soon."],
   },
 ];
