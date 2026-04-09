@@ -38,7 +38,7 @@ const educationServices = [
   },
   {
     title: "For Community at large",
-    desc: "We conduct basic first aid , life support and medical evacuation training courses for the community at large. We are continuously adding training resources to our operational services and can provide customized solution to our clients based on their needs.",
+    desc: "We conduct basic first aid , life support and medical evacuation training courses for the community at large.",
   },
 ];
 
@@ -200,6 +200,15 @@ export default function Services() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Closing note */}
+      <section className="bg-forest py-12 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-white text-[18px] leading-relaxed font-light max-w-2xl mx-auto">
+            We are continuously adding training resources to our operational services and can provide customized solutions to our clients based on their needs.
+          </p>
         </div>
       </section>
 
