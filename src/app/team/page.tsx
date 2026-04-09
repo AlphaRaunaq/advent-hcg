@@ -166,7 +166,7 @@ function TeamMember({ member }: { member: (typeof coreTeam)[0] }) {
   return (
     <div ref={sectionRef} className="relative">
       {/* Sticky Header - Image with Name & Role */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen relative overflow-hidden">
         {/* Full-screen background image or placeholder */}
         <div className="absolute inset-0">
           {hasPhoto ? (
@@ -179,27 +179,29 @@ function TeamMember({ member }: { member: (typeof coreTeam)[0] }) {
                 priority
               />
               {/* Overlay gradient for readability - lighter for brighter image */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-white" />
+              {/* Darken bottom for text readability, fade to white for card transition */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/20" />
             </>
           ) : (
             /* Placeholder background for members without photos */
-            <div className="absolute inset-0 bg-gradient-to-b from-forest via-forest-mid to-white" />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest-mid to-forest/60" />
           )}
         </div>
 
-        {/* Name & Role - centered on image */}
-        <div className="relative z-10 text-center px-6">
+        {/* Name & Role - pinned to bottom, above the white card overlap zone */}
+        {/* Mobile: white card overlaps ~128px (mt-32), Desktop: ~192px (mt-48) */}
+        <div className="absolute bottom-36 lg:bottom-56 left-0 right-0 z-10 text-left px-8 lg:px-16">
           {!hasPhoto && (
-            <div className="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
-              <span className="font-serif text-4xl font-bold text-white">
+            <div className="w-20 h-20 mb-4 bg-white/20 rounded-full flex items-center justify-center">
+              <span className="font-serif text-3xl font-bold text-white">
                 {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
               </span>
             </div>
           )}
-          <h3 className="font-serif text-4xl lg:text-6xl font-bold text-white mb-3 drop-shadow-lg">
+          <h3 className="font-serif text-4xl lg:text-6xl font-bold text-white mb-2 drop-shadow-lg">
             {member.name}
           </h3>
-          <p className="text-lg lg:text-xl text-white/90 font-medium drop-shadow-md">
+          <p className="text-lg lg:text-xl text-white/80 font-medium drop-shadow-md tracking-wide">
             {member.role}
           </p>
         </div>
