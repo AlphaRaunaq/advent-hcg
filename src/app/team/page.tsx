@@ -190,7 +190,7 @@ function TeamMember({ member }: { member: (typeof coreTeam)[0] }) {
 
         {/* Name & Role - pinned to bottom, above the white card overlap zone */}
         {/* Mobile: white card overlaps ~128px (mt-32), Desktop: ~192px (mt-48) */}
-        <div className="absolute bottom-36 lg:bottom-56 left-0 right-0 z-10 text-left px-8 lg:px-16">
+        <div className="absolute bottom-56 lg:bottom-72 left-0 right-0 z-10 text-left px-8 lg:px-16">
           {!hasPhoto && (
             <div className="w-20 h-20 mb-4 bg-white/20 rounded-full flex items-center justify-center">
               <span className="font-serif text-3xl font-bold text-white">
