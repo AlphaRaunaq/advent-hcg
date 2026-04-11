@@ -63,12 +63,22 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 divide-rule border border-rule">
-          {services.map((s) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-rule">
+          {services.map((s, i) => {
+            const borderClasses = [
+              "border-b md:border-r lg:border-r", // 01
+              "border-b lg:border-r", // 02
+              "border-b md:border-r lg:border-r-0", // 03
+              "border-b lg:border-b-0 lg:border-r", // 04
+              "border-b md:border-b-0 md:border-r", // 05
+              "", // 06
+            ];
+            
+            return (
             <Link
               key={s.num}
               href={s.href}
-              className="group p-8 border-rule md:border-r last:border-r-0 [&:nth-child(3n)]:border-r-0 border-b hover:bg-pale transition-colors flex flex-col gap-4"
+              className={`group p-8 border-rule ${borderClasses[i]} hover:bg-pale transition-colors flex flex-col gap-4`}
             >
               <span className="font-serif text-sm text-mint font-bold">
                 {s.num}
@@ -83,7 +93,8 @@ export default function Services() {
                 Read More →
               </span>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

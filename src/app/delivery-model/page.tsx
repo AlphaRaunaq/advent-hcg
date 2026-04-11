@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DeliveryModel() {
   const bullets = [
     "The healthcare domain is vast and requires a multifaceted approach.",
@@ -40,8 +42,15 @@ export default function DeliveryModel() {
                 </li>
               ))}
             </ul>
-            <div className="bg-pale border border-rule p-8 text-center text-[16px] text-ink-muted">
-              Delivery model diagram — coming soon
+            <div className="relative w-full rounded-lg overflow-hidden shadow-sm border border-rule">
+              <Image
+                src="/delivery-model.png"
+                alt="Advent HCG Delivery Model Diagram"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+                priority
+              />
             </div>
           </div>
         </div>
