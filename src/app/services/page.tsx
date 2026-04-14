@@ -46,15 +46,15 @@ export default function Services() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-forest py-20 px-6 lg:px-12">
+      <section className="bg-surface py-20 px-6 lg:px-12 border-b border-rule">
         <div className="max-w-7xl mx-auto">
           <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Services
           </span>
-          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
+          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-forest mt-4 leading-[1.08] tracking-tighter max-w-3xl">
             How we help our clients
           </h1>
-          <p className="text-white text-[21px] leading-relaxed font-light mt-6 max-w-2xl">
+          <p className="text-forest/90 text-[21px] leading-relaxed font-light mt-6 max-w-2xl">
             We are a single window service provider and deliver by blending our
             internal strengths with the capabilities of our partners and
             outsourcing resources to deliver customized, innovative, unique and
@@ -204,9 +204,9 @@ export default function Services() {
       </section>
 
       {/* Closing note */}
-      <section className="bg-forest py-12 px-6 lg:px-12">
+      <section className="bg-white py-12 px-6 lg:px-12 border-t border-rule">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white text-[18px] leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-forest text-[21px] leading-relaxed font-light max-w-2xl mx-auto">
             We are continuously adding training resources to our operational services and can provide customized solutions to our clients based on their needs.
           </p>
         </div>

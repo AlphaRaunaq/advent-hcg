@@ -37,7 +37,7 @@ export default function Clients() {
   };
 
   return (
-    <section className="bg-pale border-y border-rule py-12 overflow-hidden">
+    <section className="bg-white border-y border-rule py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-8">
         <div className="w-10 h-0.5 bg-accent mb-4" />
         <span className="text-[14px] font-medium text-sage tracking-[0.12em] uppercase">

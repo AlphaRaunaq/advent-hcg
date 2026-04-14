@@ -21,12 +21,12 @@ export default function OurVision() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-forest py-20 px-6 lg:px-12">
+      <section className="bg-surface py-20 px-6 lg:px-12 border-b border-rule">
         <div className="max-w-7xl mx-auto">
           <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Our Vision
           </span>
-          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
+          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-forest mt-4 leading-[1.08] tracking-tighter max-w-3xl">
             A healthier India, delivered with compassion
           </h1>
         </div>

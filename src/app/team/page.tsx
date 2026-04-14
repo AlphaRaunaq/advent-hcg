@@ -35,29 +35,6 @@ const coreTeam = [
     ],
   },
   {
-    name: "Dr. Sangram Pundir",
-    role: "Hyperbaric Consultant",
-    photo: "dr-sangram-pundir.jpg",
-    bullets: [
-      "Consultant in Psychiatry, Marine & Hyperbaric Medicine Private Practice: 2013 – present: Pune.",
-      "Assistant Professor in Psychiatry, Classified Specialist in Marine Medicine, Institute of Naval Medicine, INHS Asvini, Indian Navy Jul2008 – Jul 2013.",
-      "Study Leave in Psychiatry at Armed Forces Medical College: 2005-2008.",
-      "Classified Specialist in Marine Medicine, Indian Navy (Instructor, Submarine School, INS Satavahana, Vizag) 2003-2005.",
-      "Graded Specialist in Marine Medicine, Indian Navy (Squadron Medical Officer, Squadron Diving Officer )1996 – 2002.",
-      "Submarine Medical Officer, Indian Navy1990 – 1995.",
-      "MD (Psychiatry) 2008 Armed Forces Medical College, Pune.",
-      "Diploma in Marine Medicine, 1996. Institute of Naval Medicine, INHS Asvini, Mumbai 3. MBBS 1988. Armed Forces Medical College, Pune.",
-      "Pre-hospital Emergency Medicare 2. Telemedicine.",
-      "Sleep Disorders-Circadian rhythm and shift work disorders 4. Depression and anxiety in coronary artery disease.",
-      "Psychiatric morbidity in primary and secondary care 6. Neuropsychological Assessment.",
-      "Indian Navy Submarine School, Vishakhapatnam: Submarine Course, 1990 2. Indian Navy Diving School, Kochi: Ship's Diving Officer Course, 1995.",
-      "Marine Medical Society of India (Secretary 2008-2011).",
-      "MD (Psychiatry Thesis-Pune University) Study of the prevalence of depression in patients of coronary artery disease among uniformed personnel and their response to treatment.",
-      "AFMRC Project 3780/2008 : A study of psychiatric morbidity in patients presenting to primary and secondary care.",
-      "AFMRC Project no: 3948/2009 :Perchance to dream or to keep submariners fighting fit: study of the effects on submariner's sleep, alertness and cognitive performance of a conventional 3 hrs on/6 hrs off watch schedule (18 hr sleep-wake cycle) compared to a 4 hrs on/ 8 hrs off watch schedule based on circadian biorhythm 24 hrs sleep-wake cycle.",
-    ],
-  },
-  {
     name: "Dr. Puneet Singh",
     role: "Healthcare Operations",
     photo: "dr-puneet-singh.jpg",
@@ -67,19 +44,6 @@ const coreTeam = [
       "He has a wholesome overview on a wide range of positions in the Navy – strategic, advisory & operational",
       "After leaving the Navy he has worked with Advent on projects such as the Siliguri Hospital , Agroha Medical College and current works actively with an NGO in Uttarakhand",
       "He works with Advent in managing the hyperbaric services and managing day to day operations in Advent",
-    ],
-  },
-  {
-    name: "Dr. Niti Kukreja",
-    role: "Healthcare Analyst (Business)",
-    photo: "dr-niti-kukreja.jpg",
-    bullets: [
-      "Dr Niti Kukreja Business Analyst (Healthcare)",
-      "She is a qualified Dentist and a Post Graduate in Public Health.",
-      "Has been involved in market analysis, data validation and Interpretation of various research findings in Healthcare provider segment.",
-      "Has a skill set of developing market strategy for existing & new business verticals",
-      "An active member of project execution monitoring team.",
-      "Demonstrate ability to identify marketplace opportunities and achieve revenue growth, as a business development analyst in professional services environment.",
     ],
   },
   {
@@ -247,19 +211,19 @@ export default function Team() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-forest py-20 px-6 lg:px-12">
+      <section className="bg-surface py-20 px-6 lg:px-12 border-b border-rule">
         <div className="max-w-7xl mx-auto">
           <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Advent Team
           </span>
-          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
+          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-forest mt-4 leading-[1.08] tracking-tighter max-w-3xl">
             A team committed to transforming healthcare
           </h1>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="bg-pale py-16 px-6 lg:px-12 border-b border-rule">
+      <section className="bg-white py-16 px-6 lg:px-12 border-b border-rule">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[200px_1fr] gap-16">
           <div className="pt-1">
             <div className="w-10 h-0.5 bg-accent mb-4" />
@@ -302,7 +266,7 @@ export default function Team() {
       </section>
 
       {/* Core Team */}
-      <section className="bg-white py-20 px-0 lg:px-12">
+      <section className="bg-pale py-20 px-0 lg:px-12">
         <div className="px-6 lg:px-0 max-w-7xl lg:mx-auto">
           <div className="w-10 h-0.5 bg-accent mb-4" />
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-12">
@@ -317,7 +281,7 @@ export default function Team() {
       </section>
 
       {/* Advisory Team */}
-      <section className="bg-pale py-20 px-0 lg:px-12 border-t border-rule">
+      <section className="bg-white py-20 px-0 lg:px-12 border-t border-rule">
         <div className="px-6 lg:px-0 max-w-7xl lg:mx-auto">
           <div className="w-10 h-0.5 bg-accent mb-4" />
           <h2 className="font-serif text-3xl font-bold text-ink tracking-tight mb-4">

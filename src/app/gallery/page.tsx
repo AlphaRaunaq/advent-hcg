@@ -65,12 +65,12 @@ export default function GalleryPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-forest py-20">
+      <section className="bg-surface py-20 border-b border-rule">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <h1 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="font-serif text-4xl lg:text-5xl font-bold text-forest mb-4">
             Gallery
           </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+          <p className="text-forest/80 text-lg max-w-2xl mx-auto">
             A glimpse into our journey — events, projects, and milestones.
           </p>
         </div>

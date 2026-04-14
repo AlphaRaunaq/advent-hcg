@@ -11,12 +11,12 @@ export default function DeliveryModel() {
 
   return (
     <main>
-      <section className="bg-forest py-20 px-6 lg:px-12">
+      <section className="bg-surface py-20 px-6 lg:px-12 border-b border-rule">
         <div className="max-w-7xl mx-auto">
           <span className="text-[14px] font-medium text-accent tracking-[0.12em] uppercase">
             Delivery Model
           </span>
-          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-white mt-4 leading-[1.08] tracking-tighter max-w-3xl">
+          <h1 className="font-serif text-5xl lg:text-6xl font-bold text-forest mt-4 leading-[1.08] tracking-tighter max-w-3xl">
             Advent's networked approach: domain experts
           </h1>
         </div>

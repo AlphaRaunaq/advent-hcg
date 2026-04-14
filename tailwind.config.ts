@@ -12,8 +12,9 @@ const config: Config = {
         },
         sage: "#8B1A27",  
         mint: "#D4A0A7",  
-        pale: "#F7F0F1",  
-        accent: "#FF7575",  
+        pale: "#F7F0F1",
+        surface: "#f3e8e9",
+        accent: "#cc3f3fff",  
         rule: "#E8D0D3",  
         ink: {
           DEFAULT: "#111010",
